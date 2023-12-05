@@ -113,10 +113,12 @@ export const DynamicEditableTitle = ({
   // then we can measure the width of that span to resize the input element
   useLayoutEffect(() => {
     if (sizerRef?.current) {
-      sizerRef.current.innerHTML = (currentTitle || placeholder).replace(
-        /\s/g,
-        '&nbsp;',
-      );
+      sizerRef.current.innerHTML = (currentTitle || placeholder)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
     }
   }, [currentTitle, placeholder, sizerRef]);
 
