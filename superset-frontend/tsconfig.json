@@ -6,7 +6,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-
+    "strict": false,
     /* Modules */
     "baseUrl": ".",
     "module": "esnext",

@@ -286,6 +286,7 @@ const config = {
       //  AntD version conflict has been resolved
       antd: path.resolve(path.join(APP_DIR, './node_modules/antd')),
       react: path.resolve(path.join(APP_DIR, './node_modules/react')),
+      deckgl: path.resolve(path.join(APP_DIR, './node_modules/deck.gl')),
       // TODO: remove Handlebars alias once Handlebars NPM package has been updated to
       // correctly support webpack import (https://github.com/handlebars-lang/handlebars.js/issues/953)
       handlebars: 'handlebars/dist/handlebars.js',
