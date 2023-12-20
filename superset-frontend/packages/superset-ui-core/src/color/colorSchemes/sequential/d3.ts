@@ -21,6 +21,22 @@ import SequentialScheme from '../../SequentialScheme';
 
 const schemes = [
   {
+    id: 'schemeReGr',
+    label: 'red/green',
+    isDiverging: true,
+    colors: [
+      '#ff0000',
+      '#ff3f00',
+      '#ff7f00',
+      '#ffbf00',
+      '#ffff00',
+      '#bfff00',
+      '#7fff00',
+      '#3fff00',
+      '#00ff00',
+    ],
+  },
+  {
     id: 'schemeRdBu',
     label: 'red/blue',
     isDiverging: true,
@@ -356,14 +372,14 @@ const schemes = [
     id: 'schemeBuGn',
     label: 'blue/green',
     colors: [
-      '#b7e4da',
-      '#8fd3c1',
-      '#68c2a3',
-      '#49b17f',
-      '#2f9959',
-      '#157f3c',
-      '#036429',
-      '#00441b',
+      '#0000FF',
+      '#0024DA',
+      '#0048B6',
+      '#006D91',
+      '#00916D',
+      '#00B648',
+      '#00DA24',
+      '#00FF00',
     ],
   },
   {
