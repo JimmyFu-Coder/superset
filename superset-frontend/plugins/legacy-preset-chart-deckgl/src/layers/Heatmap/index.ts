@@ -27,10 +27,10 @@ const metadata = new ChartMetadata({
   description: t(
     'Uses Gaussian Kernel Density Estimation to visualize spatial distribution of data',
   ),
-  name: t('deck.gl Heatmap'),
+  name: t('Mapbox Heatmap'),
   thumbnail,
   useLegacyApi: true,
-  tags: [t('deckGL'), t('Spatial'), t('Comparison'), t('Experimental')],
+  tags: [t('Maxpbox'), t('Spatial'), t('Comparison'), t('Experimental')],
 });
 
 export default class HeatmapChartPlugin extends ChartPlugin {
