@@ -1,7 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable theme-colors/no-literal-colors */
 import React, { CSSProperties } from 'react';
-
+/**
+ * Author: Jimmy Fu
+ * Description: This is the color bar that is displayed on the right side of the map. It is used to show the color gradient and the corresponding values.
+ * @param min number
+ * @param max number
+ * @returns number[]
+ */
 const calculateDistributionPoints = (min: number, max: number) => {
   const points = [];
   points.push(min);
@@ -25,7 +31,7 @@ const ColorBar = ({ gradientStops, max, min }: any) => {
       position: 'absolute',
       top: '50px',
       left: '50px',
-      width: '20px', // Adjusted for vertical bar
+      width: '20px',
       height: '80%',
       backgroundImage: `linear-gradient(to top, ${gradient})`, // Gradient now goes top to bottom
       borderRadius: '5px',
