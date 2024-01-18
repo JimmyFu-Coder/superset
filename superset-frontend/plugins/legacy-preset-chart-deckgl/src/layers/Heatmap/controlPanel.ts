@@ -124,15 +124,6 @@ const config: ControlPanelConfig = {
         ],
       ],
     },
-    {
-      label: t('Advanced'),
-      controlSetRows: [
-        [jsColumns],
-        [jsDataMutator],
-        [jsTooltip],
-        [jsOnclickHref],
-      ],
-    },
   ],
   controlOverrides: {
     size: {
