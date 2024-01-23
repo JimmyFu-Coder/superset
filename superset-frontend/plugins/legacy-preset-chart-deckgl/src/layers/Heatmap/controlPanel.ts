@@ -30,10 +30,6 @@ import {
 import {
   autozoom,
   filterNulls,
-  jsColumns,
-  jsDataMutator,
-  jsOnclickHref,
-  jsTooltip,
   mapboxStyle,
   spatial,
   viewport,
