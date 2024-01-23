@@ -141,3 +141,12 @@ FROM lean AS ci
 COPY --chown=superset:superset --chmod=755 ./docker/*.sh /app/docker/
 
 CMD ["/app/docker/docker-ci.sh"]
+
+######################################################################
+# Configurable image...
+######################################################################
+USER root
+RUN mkdir -p /app/superset-config
+COPY superset_config.py /app/superset-config/
+USER superset
+ENV SUPERSET_CONFIG_PATH=/app/superset-config/superset_config.py
