@@ -25,6 +25,9 @@ import os
 
 from celery.schedules import crontab
 from flask_caching.backends.filesystemcache import FileSystemCache
+# Set this API key to enable Mapbox visualizations
+MAPBOX_API_KEY = 'pk.eyJ1IjoienpmamVhbiIsImEiOiJjbHB6Z3U0Mmkwb2VyMmlvNWNjbGZuZG9tIn0.6i1Vga-lixcb070prjB1gg'
+SECRET_KEY = "ZT2uRVAMPKpVkHM/QA1QiQlMuUgAi7LLo160AHA99aihEjp03m1HR6Kg" 
 
 logger = logging.getLogger()
 
@@ -99,6 +102,26 @@ WEBDRIVER_BASEURL = "http://superset:8088/"
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+
+WTF_CSRF_ENABLED = False
+ 
+
+HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+PUBLIC_ROLE_LIKE_GAMMA = True
+ENABLE_PROXY_FIX = True
+PUBLIC_ROLE_LIKE = "Gamma"
+ENABLE_CORS = True
+FEATURE_FLAGS = {
+    "EMBEDDED_SUPERSET": True
+}
+
+CORS_OPTIONS = {
+  'supports_credentials': True,
+  'allow_headers': ['*'],
+  'resources':['*'],
+  'origins': ['*']
+}
+
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
