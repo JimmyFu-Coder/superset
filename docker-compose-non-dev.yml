@@ -13,8 +13,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-x-superset-image: &superset-image apachesuperset.docker.scarf.sh/apache/superset:${TAG:-latest-dev}
+# docker pull jinshuaifu/raptor_superset:latest
+x-superset-image: &superset-image jinshuaifu/raptor_superset:latest
+
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
@@ -22,7 +23,6 @@ x-superset-volumes:
   &superset-volumes # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
   - ./docker:/app/docker
   - superset_home:/app/superset_home
-  - ./superset/static/assets:/app/superset/static/assets
   - ./docker/raptoros-logo-horiz.png:/app/superset/static/assets/images/superset-logo-horiz.png
   - ./docker/favicon.png:/app/superset/static/assets/images/favicon.png
 
